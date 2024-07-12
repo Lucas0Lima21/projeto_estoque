@@ -1,0 +1,3 @@
+jogo, 10
+camisa, 30
+jojo, 500
