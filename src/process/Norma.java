@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import model.Contagem;
@@ -15,20 +16,45 @@ public class Norma {
 	private ArrayList<Contagem> itens = new ArrayList<Contagem>();
 	
 	
-	public void processarEstoque() {
-		try {
-			FileWriter fw = new FileWriter("list_contada.txt");
-			BufferedWriter bw = new BufferedWriter(fw);
-			for (Contagem item : itens) {
-				bw.append(item.toString());
-				
-			}
-			bw.close();
-			fw.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+    public void processarEstoque() {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("list_contada.txt"))) {
+            for (Contagem item : itens) {
+                Estoque estoqueAtual = encontrarEstoque(item.getNome());
+                if (estoqueAtual != null) {
+                    int quantidadeInicial = estoqueAtual.getQuantidade();
+                    int quantidadeContada = item.getQuantidade();
+                    if (quantidadeContada <= quantidadeInicial) {
+                        int quantidadeAdicional = quantidadeContada - quantidadeInicial;
+                        estoqueAtual.setQuantidade(quantidadeInicial + quantidadeAdicional);
+                    	int quantidadeRetirada = quantidadeContada - quantidadeInicial;
+                        bw.write(item.getNome() + "," + quantidadeContada + " - Estoque retirado: " + quantidadeRetirada + " - novo estoque: " + estoqueAtual.getQuantidade());
+                        bw.newLine();
+                    } else {
+                        int quantidadeAdicional = quantidadeContada - quantidadeInicial;
+                        estoqueAtual.setQuantidade(quantidadeInicial + quantidadeAdicional);
+                        bw.write(item.getNome() + "," + quantidadeContada + " - Quantidade adicionada: " + quantidadeAdicional + ". Novo estoque: " + estoqueAtual.getQuantidade());
+                        bw.newLine();
+                    }
+                } else {
+                    bw.write("Produto não encontrado no estoque: " + item.getNome());
+                    bw.newLine();
+                }
+            }
+            System.out.println("Processamento do arquivo 'list_contada.txt' concluído.");
+        } catch (IOException e) {
+            System.err.println("Erro ao escrever arquivo 'list_contada.txt': " + e.getMessage());
+        }
+    }
+	
+	private Estoque encontrarEstoque(String nome) {
+	    for (Estoque estoque : estoque) {
+	        if (estoque.getNome().equalsIgnoreCase(nome)) {
+	            return estoque;
+	        }
+	    }
+	    return null;
 	}
+
 	
 	public void carregaListaEstoque() {
 		try {
@@ -38,7 +64,7 @@ public class Norma {
 			while((linha = br.readLine())!=null) {
 				String parts[] = linha.split(",");
 				String nome = parts[0];
-				int quantidade = Integer.parseInt(parts[1]);
+				int quantidade = Integer.parseInt(parts[1].trim());
 				estoque.add(new Estoque(nome, quantidade));
 			}
 			br.close();
@@ -55,7 +81,7 @@ public class Norma {
 			while((linha = br.readLine())!=null) {
 				String parts[] = linha.split(",");
 				String nome = parts[0];
-				int quantidade = Integer.parseInt(parts[1]);
+				int quantidade = Integer.parseInt(parts[1].trim());
 				itens.add(new Contagem(nome, quantidade));
 			}
 			br.close();

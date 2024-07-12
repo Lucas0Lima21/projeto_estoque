@@ -1,0 +1,3 @@
+jogo,10 - Estoque retirado: -1 - novo estoque: 10
+camisa,15 - Estoque retirado: -2 - novo estoque: 15
+jojo,20 - Quantidade adicionada: 5. Novo estoque: 20
