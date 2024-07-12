@@ -1,3 +1,19 @@
-jogo,10 - Estoque retirado: -1 - novo estoque: 10
-camisa,15 - Estoque retirado: -2 - novo estoque: 15
-jojo,20 - Quantidade adicionada: 5. Novo estoque: 20
+Memória DDR4,6       - Estoque retirado: -4       - novo estoque: 6
+HD SSD 500GB,18       - Quantidade adicionada: 3       - Novo estoque: 18
+Monitor LED 24 polegadas,5       - Estoque retirado: 0       - novo estoque: 5
+Teclado sem fio,8       - Estoque retirado: 0       - novo estoque: 8
+Mouse óptico USB,12       - Estoque retirado: 0       - novo estoque: 12
+Adaptador HDMI,20       - Estoque retirado: 0       - novo estoque: 20
+Cabo Ethernet 5 metros,25       - Estoque retirado: 0       - novo estoque: 25
+Impressora multifuncional,10       - Quantidade adicionada: 7       - Novo estoque: 10
+Roteador Wi-Fi dual-band,15       - Quantidade adicionada: 9       - Novo estoque: 15
+Caixa de som Bluetooth,7       - Estoque retirado: 0       - novo estoque: 7
+Fones de ouvido com microfone,18       - Estoque retirado: 0       - novo estoque: 18
+Carregador portátil 10000mAh,9       - Estoque retirado: 0       - novo estoque: 9
+Webcam HD,11       - Estoque retirado: 0       - novo estoque: 11
+Mousepad gamer,14       - Estoque retirado: 0       - novo estoque: 14
+Cabo USB tipo C,30       - Quantidade adicionada: 8       - Novo estoque: 30
+Cartucho de tinta para impressora,30       - Estoque retirado: 0       - novo estoque: 30
+Capa protetora para notebook,13       - Estoque retirado: 0       - novo estoque: 13
+Lâmpada LED para monitor,17       - Estoque retirado: 0       - novo estoque: 17
+Hub USB 3.0 de 4 portas,16       - Estoque retirado: 0       - novo estoque: 16

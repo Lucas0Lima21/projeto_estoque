@@ -1,3 +1,19 @@
-jogo, 10
-camisa, 15
-jojo, 20
+Memória DDR4, 6
+HD SSD 500GB, 18
+Monitor LED 24 polegadas, 5
+Teclado sem fio, 8
+Mouse óptico USB, 12
+Adaptador HDMI, 20
+Cabo Ethernet 5 metros, 25
+Impressora multifuncional, 10
+Roteador Wi-Fi dual-band, 15
+Caixa de som Bluetooth, 7
+Fones de ouvido com microfone, 18
+Carregador portátil 10000mAh, 9
+Webcam HD, 11
+Mousepad gamer, 14
+Cabo USB tipo C, 30
+Cartucho de tinta para impressora, 30
+Capa protetora para notebook, 13
+Lâmpada LED para monitor, 17
+Hub USB 3.0 de 4 portas, 16

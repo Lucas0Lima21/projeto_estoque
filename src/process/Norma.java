@@ -27,12 +27,12 @@ public class Norma {
                         int quantidadeAdicional = quantidadeContada - quantidadeInicial;
                         estoqueAtual.setQuantidade(quantidadeInicial + quantidadeAdicional);
                     	int quantidadeRetirada = quantidadeContada - quantidadeInicial;
-                        bw.write(item.getNome() + "," + quantidadeContada + " - Estoque retirado: " + quantidadeRetirada + " - novo estoque: " + estoqueAtual.getQuantidade());
+                        bw.write(item.getNome() + "," + quantidadeContada + "       - Estoque retirado: " + quantidadeRetirada + "       - novo estoque: " + estoqueAtual.getQuantidade());
                         bw.newLine();
                     } else {
                         int quantidadeAdicional = quantidadeContada - quantidadeInicial;
                         estoqueAtual.setQuantidade(quantidadeInicial + quantidadeAdicional);
-                        bw.write(item.getNome() + "," + quantidadeContada + " - Quantidade adicionada: " + quantidadeAdicional + ". Novo estoque: " + estoqueAtual.getQuantidade());
+                        bw.write(item.getNome() + "," + quantidadeContada + "       - Quantidade adicionada: " + quantidadeAdicional + "       - Novo estoque: " + estoqueAtual.getQuantidade());
                         bw.newLine();
                     }
                 } else {
